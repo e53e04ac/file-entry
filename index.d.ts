@@ -29,22 +29,38 @@ export declare namespace FileEntry {
             (): Promise<boolean>;
         };
         readonly children: {
-            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+                readonly returnDirectories?: boolean;
+                readonly returnFiles?: boolean;
+            }): AsyncGenerator<Self, void, void>;
         };
         readonly directories: {
-            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+            }): AsyncGenerator<Self, void, void>;
         };
         readonly files: {
-            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+            }): AsyncGenerator<Self, void, void>;
         };
         readonly childrenSync: {
-            (params: { depth?: number; }): Generator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+                readonly returnDirectories?: boolean;
+                readonly returnFiles?: boolean;
+            }): Generator<Self, void, void>;
         };
         readonly directoriesSync: {
-            (params: { depth?: number; }): Generator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+            }): Generator<Self, void, void>;
         };
         readonly filesSync: {
-            (params: { depth?: number; }): Generator<Self, void, void>;
+            (params: {
+                readonly depth?: number;
+            }): Generator<Self, void, void>;
         };
         readonly createDirectory: {
             (): Promise<void>;
