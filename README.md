@@ -17,8 +17,8 @@ graph RL;
   A --reference--> B_0;
   A --reference--> B_1;
   A --reference--> B_2;
-  click B_0 "https://github.com/e53e04ac/base/tree/86bc9dc951e32d7e173b8e7bf020b9439d75f8f7";
-  click B_1 "https://github.com/e53e04ac/hold/tree/385afd8049a499071f966af24caf970731543db4";
+  click B_0 "https://github.com/e53e04ac/base/tree/b4e091dbfeba0ea30c870ac7ac7877582e3fd4f0";
+  click B_1 "https://github.com/e53e04ac/hold/tree/2143f5f52192ae4156ea0af80d41c87c55355e9c";
   click B_2 "https://www.npmjs.org/package/@types/node/v/18.13.0";
 ~~~~~
 
