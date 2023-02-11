@@ -28,6 +28,24 @@ export declare namespace FileEntry {
         readonly exists: {
             (): Promise<boolean>;
         };
+        readonly children: {
+            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+        };
+        readonly directories: {
+            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+        };
+        readonly files: {
+            (params: { depth?: number; }): AsyncGenerator<Self, void, void>;
+        };
+        readonly childrenSync: {
+            (params: { depth?: number; }): Generator<Self, void, void>;
+        };
+        readonly directoriesSync: {
+            (params: { depth?: number; }): Generator<Self, void, void>;
+        };
+        readonly filesSync: {
+            (params: { depth?: number; }): Generator<Self, void, void>;
+        };
         readonly createDirectory: {
             (): Promise<void>;
         };
