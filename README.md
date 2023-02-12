@@ -4,9 +4,6 @@
 npm install e53e04ac/file-entry
 ~~~~~
 
-~~~~~ mjs
-~~~~~
-
 ~~~~~ mermaid
 graph RL;
   A(["package.json"]);
