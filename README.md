@@ -34,14 +34,20 @@ graph RL;
     E_1(["type FileEntry"]);
   end;
   M(["index.d.ts"])
+  subgraph "node:fs";
+    I_0_0(["ReadStream"]);
+    I_0_1(["WriteStream"]);
+  end;
   subgraph "node:path";
-    I_0_0(["ParsedPath"]);
+    I_1_0(["ParsedPath"]);
   end;
   subgraph "hold";
-    I_1_0(["Get"]);
+    I_2_0(["Get"]);
   end;
   M ----> I_0_0;
+  M ----> I_0_1;
   M ----> I_1_0;
+  M ----> I_2_0;
   E_0 ----> M;
   E_1 ----> M;
 ~~~~~
