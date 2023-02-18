@@ -196,6 +196,12 @@ export declare namespace FileEntry {
         readonly createWriteStream: {
             (): Promise<FsWriteStream>;
         };
+        readonly createWriteLineStream: {
+            (options?: {
+                readonly lineDelimiter?: string;
+                readonly encoding?: BufferEncoding;
+            }): Promise<FsWriteStream>;
+        };
     };
 
 }
