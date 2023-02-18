@@ -4,9 +4,9 @@
     MIT License
 */
 
-import { ReadStream as FsReadStream } from 'node:fs';
-import { WriteStream as FsWriteStream } from 'node:fs';
 import { ParsedPath as PathParsedPath } from 'node:path';
+import { Readable as StreamReadable } from 'node:stream';
+import { Writable as StreamWritable } from 'node:stream';
 
 import { Get } from 'hold';
 
@@ -191,16 +191,16 @@ export declare namespace FileEntry {
             }): T;
         };
         readonly createReadStream: {
-            (): Promise<FsReadStream>;
+            (): Promise<StreamReadable>;
         };
         readonly createWriteStream: {
-            (): Promise<FsWriteStream>;
+            (): Promise<StreamWritable>;
         };
         readonly createWriteLineStream: {
             (options?: {
                 readonly lineDelimiter?: string;
                 readonly encoding?: BufferEncoding;
-            }): Promise<FsWriteStream>;
+            }): Promise<StreamWritable>;
         };
     };
 
