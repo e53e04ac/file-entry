@@ -6,25 +6,35 @@ npm install e53e04ac/file-entry
 
 ~~~~~ mermaid
 graph RL;
-  A(["package.json"]);
+  A["package.json\npackage-lock.json"];
   subgraph "dependencies";
-    B_0(["e53e04ac/base"]);
-    B_1(["e53e04ac/hold"]);
+    B_0(["base"]);
+    B_1(["hold"]);
   end;
   subgraph "devDependencies";
     B_2(["@types/node"]);
   end;
+  subgraph "github";
+    C_0(["e53e04ac/base\n5f8ab34b8cf48f6fea778a530617ccc8aefa1970"]);
+    C_1(["e53e04ac/hold\n6845a848f97733b8cd8a34bfc03c3bf040818aa8"]);
+  end;
+  subgraph "npmjs";
+    C_2(["@types/node\n18.14.1"]);
+  end;
   A ----> B_0;
   A ----> B_1;
   A ----> B_2;
-  click B_0 "https://github.com/e53e04ac/base/tree/fc0fe75d4737062206ea1b99def2b1b2df6b99fa";
-  click B_1 "https://github.com/e53e04ac/hold/tree/443c2e801bbe20409c761994a91fa88fb6044602";
-  click B_2 "https://www.npmjs.com/package/@types/node/v/18.14.1";
+  B_0 ----> C_0;
+  B_1 ----> C_1;
+  B_2 ----> C_2;
+  click C_0 "https://github.com/e53e04ac/base/tree/5f8ab34b8cf48f6fea778a530617ccc8aefa1970";
+  click C_1 "https://github.com/e53e04ac/hold/tree/6845a848f97733b8cd8a34bfc03c3bf040818aa8";
+  click C_2 "https://www.npmjs.com/package/@types/node/v/18.14.1";
 ~~~~~
 
 ~~~~~ mermaid
 graph RL;
-  M(["index.mjs"])
+  M["index.mjs"]
 ~~~~~
 
 ~~~~~ mermaid
@@ -33,7 +43,7 @@ graph RL;
     E_0(["namespace FileEntry"]);
     E_1(["type FileEntry"]);
   end;
-  M(["index.d.ts"])
+  M["index.d.ts"]
   subgraph "node:path";
     I_0_0(["ParsedPath"]);
   end;
