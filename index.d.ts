@@ -35,16 +35,25 @@ export declare namespace FileEntry {
                 readonly depth?: number;
                 readonly returnDirectories?: boolean;
                 readonly returnFiles?: boolean;
+                readonly filter?: {
+                    (directory: Self): Promise<boolean>;
+                };
             }): AsyncGenerator<Self, void, void>;
         };
         readonly directories: {
             (params?: {
                 readonly depth?: number;
+                readonly filter?: {
+                    (directory: Self): Promise<boolean>;
+                };
             }): AsyncGenerator<Self, void, void>;
         };
         readonly files: {
             (params?: {
                 readonly depth?: number;
+                readonly filter?: {
+                    (directory: Self): Promise<boolean>;
+                };
             }): AsyncGenerator<Self, void, void>;
         };
         readonly childrenSync: {
@@ -52,16 +61,25 @@ export declare namespace FileEntry {
                 readonly depth?: number;
                 readonly returnDirectories?: boolean;
                 readonly returnFiles?: boolean;
+                readonly filter?: {
+                    (directory: Self): boolean;
+                };
             }): Generator<Self, void, void>;
         };
         readonly directoriesSync: {
             (params?: {
                 readonly depth?: number;
+                readonly filter?: {
+                    (directory: Self): boolean;
+                };
             }): Generator<Self, void, void>;
         };
         readonly filesSync: {
             (params?: {
                 readonly depth?: number;
+                readonly filter?: {
+                    (directory: Self): boolean;
+                };
             }): Generator<Self, void, void>;
         };
         readonly createDirectory: {
