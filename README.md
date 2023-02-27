@@ -15,11 +15,11 @@ graph RL;
     B_2(["@types/node"]);
   end;
   subgraph "github";
-    C_0(["e53e04ac/base\n1d4c074238c197e136cc1d4956685d90b7118af6"]);
-    C_1(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
+    C_0(["e53e04ac/base\nbc7288b2519bd72181940cd1f29a5301d840c650"]);
+    C_1(["e53e04ac/hold\n511bb6663491dadc6e2760a04ee3750996d069f8"]);
   end;
   subgraph "npmjs";
-    C_2(["@types/node\n18.14.1"]);
+    C_2(["@types/node\n18.14.2"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -27,9 +27,9 @@ graph RL;
   B_0 ----> C_0;
   B_1 ----> C_1;
   B_2 ----> C_2;
-  click C_0 "https://github.com/e53e04ac/base/tree/1d4c074238c197e136cc1d4956685d90b7118af6";
-  click C_1 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
-  click C_2 "https://www.npmjs.com/package/@types/node/v/18.14.1";
+  click C_0 "https://github.com/e53e04ac/base/tree/bc7288b2519bd72181940cd1f29a5301d840c650";
+  click C_1 "https://github.com/e53e04ac/hold/tree/511bb6663491dadc6e2760a04ee3750996d069f8";
+  click C_2 "https://www.npmjs.com/package/@types/node/v/18.14.2";
 ~~~~~
 
 ~~~~~ mermaid
